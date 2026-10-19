@@ -1,0 +1,4 @@
+When a request to the payment service times out, the client waits before
+trying again, doubling the delay after each failure up to a maximum of
+thirty seconds. Every attempt carries the same idempotency key so the
+server never charges the customer twice.
